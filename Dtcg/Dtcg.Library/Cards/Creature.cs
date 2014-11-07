@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dtcg.Library.Card
+namespace Otcg.Library.Cards
 {
     public class Creature :Card
     {

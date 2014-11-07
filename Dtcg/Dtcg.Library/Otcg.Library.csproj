@@ -8,8 +8,8 @@
     <ProjectGuid>{3F6AEE20-8A19-45B9-B221-A595B5AEC56B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dtcg.Library</RootNamespace>
-    <AssemblyName>Dtcg.Library</AssemblyName>
+    <RootNamespace>Otcg.Library</RootNamespace>
+    <AssemblyName>Otcg.Library</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,15 +34,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="Cards\Actions.cs" />
+    <Compile Include="Cards\Card.cs" />
+    <Compile Include="Cards\Creature.cs" />
+    <Compile Include="Game\Main.cs" />
+    <Compile Include="Mechanics\Configuration.cs" />
+    <Compile Include="Player\Hero.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mechanics\Dice.cs" />
+    <Compile Include="Mechanics\ExtensionMethods.cs" />
+    <Compile Include="Turn\GameTurn.cs" />
+    <Compile Include="Turn\TurnStep.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card\Card.cs" />
-    <Compile Include="Card\CardType.cs" />
-    <Compile Include="Card\Creature.cs" />
-    <Compile Include="Player\Hero.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Turn\TurnSteps.cs" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
